@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>pl.pw.mini</groupId>
+    <artifactId>MiNISpace-database</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>MiNISpace-database</name>
+
+    <description>MiNISpace database</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>12.6.1.jre11</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>4.25.1</version>
+                <configuration>
+                    <changeLogFile>src/main/resources/masterChangelog.xml</changeLogFile>
+                    <url>*****</url>
+                    <username>*****</username>
+                    <password>*****</password>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
