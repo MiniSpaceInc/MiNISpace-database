@@ -26,9 +26,9 @@
                 <version>4.25.1</version>
                 <configuration>
                     <changeLogFile>src/main/resources/masterChangelog.xml</changeLogFile>
-                    <url>*****</url>
-                    <username>*****</username>
-                    <password>*****</password>
+                    <url>jdbc:sqlserver://localhost:1433;databaseName=Minispace;encrypt=true;trustServerCertificate=true</url>
+                    <username>sa</username>
+                    <password>reB@jKs*X9</password>
                 </configuration>
             </plugin>
         </plugins>
