@@ -5,13 +5,21 @@
 
     <changeSet id="1" author="PioRow">
         <createTable tableName="Event">
-            <column name="id" type="int">
-                <constraints primaryKey="true" nullable="false"/>
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
             </column>
-            <column name="uuid" type="varchar(255)"/>
-            <column name="name" type="varchar(255)"/>
-            <column name="organizer" type="varchar(255)"/>
-            <column name="date" type="datetime2(6)"/>
+            <column name="uuid" type="UNIQUEIDENTIFIER" defaultValueComputed="NEWID()">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="organizer" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date" type="datetime2(6)">
+                <constraints nullable="false"/>
+            </column>
             <column name="description" type="varchar(8000)"/>
         </createTable>
     </changeSet>
