@@ -1,0 +1,18 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="1" author="Adrian Rudź">
+        <renameTable oldTableName="Event" newTableName="Events"/>
+    </changeSet>
+
+    <changeSet id="2" author="Adrian Rudź">
+        <addColumn tableName="Events">
+            <column name="date_created" type="datetime2(6)"/>
+            <column name="date_modified" type="datetime2(6)"/>
+            <column name="version" type="int"/>
+        </addColumn>
+    </changeSet>
+
+</databaseChangeLog>
