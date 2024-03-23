@@ -9,7 +9,7 @@
                 <constraints primaryKey="true" nullable="false" />
             </column>
             <column name="event_id" type="int">
-                <constraints foreignKeyName="fk_post_event" references="events(id)" nullable="false" />
+                <constraints foreignKeyName="fk_posts_events" references="event(id)" nullable="false" />
             </column>
             <column name="content" type="varchar(4000)">
                 <constraints nullable="false"/>
