@@ -3,7 +3,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
 
-    <changeSet id="1" author="Adrian Rudź">
+    <changeSet id="table.posts" author="Adrian Rudź">
         <createTable tableName="Posts">
             <column name="id" type="int" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false" />
@@ -17,7 +17,7 @@
             <column name="date_posted" type="datetime2(6)">
                 <constraints nullable="false"/>
             </column>
-            <column name="date_created" type="datetime2(6)"/>
+            <column name="date_created" type="datetime2(6)" defaultValueComputed="GETDATE()"/>
             <column name="date_modified" type="datetime2(6)"/>
             <column name="version" type="int"/>
         </createTable>
