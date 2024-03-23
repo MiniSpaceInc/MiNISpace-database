@@ -1,0 +1,10 @@
+version: '3'
+services:
+  db:
+    image: olszewskib/minidb
+    volumes:
+      - mssqldata:/var/opt/mssql
+    ports:
+      - "1433:1433"
+volumes:
+  mssqldata:
