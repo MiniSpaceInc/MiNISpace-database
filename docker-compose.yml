@@ -1,7 +1,11 @@
 version: '3'
 services:
   db:
-    image: olszewskib/minidb
+    image: minispace/db:latest
+    container_name: db
+    platform: linux/amd64
+    pull_policy: always
+
     volumes:
       - mssqldata:/var/opt/mssql
     ports:
